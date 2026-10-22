@@ -106,6 +106,10 @@
         plan: "That’s what I’m talking about 😌❤️ Tell me what day works for you and we’ll plan something nice together."
       };
       document.getElementById("reply").textContent = messages[choice];
+      if (choice === "yes") {
+        const text = "Hi! 🥹❤️ I accept your date invitation! Let’s choose the day and place together.";
+        window.location.href = "https://wa.me/27719549523?text=" + encodeURIComponent(text);
+      }
       document.getElementById("reply").scrollIntoView({behavior:"smooth",block:"nearest"});
     }
   </script>
