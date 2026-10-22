@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17090f">
+  <meta name="description" content="A little invitation for Xae Theo.">
+  <title>One Date? ❤️ | For Xae Theo</title>
+  <style>
+    :root { --wine:#5c1028; --rose:#ff6f91; --cream:#fff3e9; --muted:#cdb8bf; --glass:rgba(255,255,255,.075); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; color:var(--cream); font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background: radial-gradient(ellipse at 50% 0%, #5c1028 0%, #260b17 38%, #10080d 78%);
+      min-height:100vh; overflow-x:hidden;
+    }
+    body:before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.18;
+      background-image: radial-gradient(#fff 0.7px,transparent .7px); background-size:27px 27px; }
+    .wrap { width:min(960px,92vw); margin:auto; position:relative; z-index:1; }
+    header { display:flex; align-items:center; justify-content:space-between; padding:22px 0; font-size:.82rem; letter-spacing:.14em; text-transform:uppercase; color:#f6c6d2; }
+    .mark { display:flex; align-items:center; gap:9px; }
+    .heart { color:var(--rose); font-size:1.3rem; }
+    .pill { border:1px solid #ffffff2b; border-radius:99px; padding:8px 12px; letter-spacing:.08em; }
+    .hero { text-align:center; padding:54px 0 34px; }
+    .eyebrow { color:#ffb6c8; text-transform:uppercase; letter-spacing:.24em; font-size:.72rem; }
+    h1 { font-family: Georgia,"Times New Roman",serif; font-size:clamp(3.2rem,10vw,7rem); line-height:.95; font-weight:500; margin:18px 0; letter-spacing:-.055em; }
+    h1 em { color:var(--rose); font-weight:400; }
+    .sub { color:var(--muted); font-size:clamp(1rem,2.5vw,1.2rem); line-height:1.75; max-width:560px; margin:0 auto; }
+    .names { margin:26px auto 0; display:flex; justify-content:center; align-items:center; gap:13px; color:#ffe1e8; font-family:Georgia,serif; font-size:1.15rem; }
+    .names span:nth-child(2) { color:var(--rose); font-size:1.4rem; }
+    .photo-pair { display:grid; grid-template-columns:1fr 1fr; gap:15px; width:min(620px,100%); margin:38px auto 0; }
+    .photo { position:relative; height:clamp(220px,42vw,340px); border-radius:22px; overflow:hidden; border:1px solid #ffffff25; box-shadow:0 22px 70px #0008; background:#351421; }
+    .photo img { width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05); }
+    .photo:first-child img { object-position:center 35%; }
+    .photo:nth-child(2) img { object-position:center 30%; }
+    .photo label { position:absolute; bottom:12px; left:12px; background:#17090fc9; border:1px solid #ffffff25; border-radius:99px; padding:7px 11px; font-size:.76rem; }
+    .card { margin:36px auto; padding:clamp(22px,5vw,42px); border:1px solid #ffffff20; border-radius:28px; background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035)); box-shadow:0 25px 80px #0004; backdrop-filter:blur(14px); }
+    .card h2 { font:500 clamp(2rem,5vw,3rem)/1.1 Georgia,serif; margin:0 0 16px; }
+    .card p { color:var(--muted); line-height:1.8; }
+    .details { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:24px 0; }
+    .detail { padding:16px 12px; border:1px solid #ffffff19; background:#ffffff08; border-radius:16px; }
+    .detail small { display:block; color:#ffb6c8; letter-spacing:.13em; text-transform:uppercase; font-size:.65rem; margin-bottom:8px; }
+    .detail strong { font-weight:550; font-size:.94rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+    button, .btn { appearance:none; border:0; cursor:pointer; border-radius:99px; padding:14px 21px; font-weight:700; font-size:.94rem; text-decoration:none; transition:transform .2s,filter .2s; }
+    button:hover,.btn:hover { transform:translateY(-2px); filter:brightness(1.08); }
+    .primary { color:#260b17; background:linear-gradient(110deg,#ff9db5,#ffd3dc); box-shadow:0 8px 25px #ff6f9133; }
+    .secondary { color:var(--cream); background:#ffffff0c; border:1px solid #ffffff35; }
+    #reply { margin-top:20px; min-height:24px; color:#ffd3dc; font-family:Georgia,serif; font-size:1.2rem; line-height:1.6; }
+    .note { font-size:.82rem; color:#ad929b!important; }
+    .quote { text-align:center; padding:20px 10px 48px; }
+    .quote blockquote { margin:0 auto 12px; max-width:650px; font:italic clamp(1.45rem,4vw,2.2rem)/1.4 Georgia,serif; color:#ffe0e7; }
+    footer { border-top:1px solid #ffffff17; padding:24px 0 35px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; color:#9e818b; font-size:.78rem; }
+    .floating { position:fixed; z-index:0; color:#ff6f9130; font-size:24px; animation:float 9s ease-in-out infinite; pointer-events:none; }
+    .f1 { top:20%; left:5%; }.f2 { top:60%; right:5%; animation-delay:-3s; }.f3 { top:82%; left:12%; animation-delay:-6s; }
+    @keyframes float { 0%,100%{transform:translateY(0) rotate(-8deg)} 50%{transform:translateY(-25px) rotate(10deg)} }
+    @media(max-width:560px) { header{font-size:.68rem}.hero{padding-top:35px}.photo-pair{gap:9px}.photo{height:235px;border-radius:17px}.details{grid-template-columns:1fr}.detail{display:flex;justify-content:space-between;align-items:center}.detail small{margin:0}.actions button{width:100%}.card{border-radius:22px} }
+  </style>
+</head>
+<body>
+  <div class="floating f1">♡</div><div class="floating f2">✦</div><div class="floating f3">♡</div>
+  <div class="wrap">
+    <header><div class="mark"><span class="heart">♥</span> A little something for you</div><div class="pill">Officially invited</div></header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">A tiny question with big energy</div>
+        <h1>Xae, will you<br><em>go on a date</em><br>with me?</h1>
+        <p class="sub">No pressure, no awkward speeches… just good company, a little laughter, and a chance to see where this goes. ❤️</p>
+        <div class="names"><span>Me</span><span>♥</span><span>You, Xae Theo</span></div>
+        <div class="photo-pair">
+          <div class="photo"><img src="assets/you.jpeg" alt="Your date's photo"><label>Your date 🤍</label></div>
+          <div class="photo"><img src="assets/xae.jpeg" alt="Xae Theo"><label>The beautiful Xae 🌹</label></div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="eyebrow">The invitation</div>
+        <h2>Let's make a little memory.</h2>
+        <p>Xae, I’d really like to take you out and spend some time with you in person. We can choose somewhere nice, talk properly, laugh a little, and enjoy the moment. You bring your smile — I’ll bring the effort. 🥹❤️</p>
+        <div class="details">
+          <div class="detail"><small>When</small><strong>We'll choose together</strong></div>
+          <div class="detail"><small>Where</small><strong>Somewhere lovely</strong></div>
+          <div class="detail"><small>Dress code</small><strong>Come as you are ✨</strong></div>
+        </div>
+        <p class="note">The date, time and place are intentionally left open so we can pick what works for both of us.</p>
+        <div class="actions">
+          <button class="primary" onclick="reply('yes')">Okay… I’m in 🥹❤️</button>
+          <button class="secondary" onclick="reply('maybe')">Let me think 😂</button>
+          <button class="secondary" onclick="reply('plan')">Let’s plan it together ✨</button>
+        </div>
+        <div id="reply" aria-live="polite"></div>
+        <p class="note">Tap a response to reveal a cute reply you can screenshot or send back to me.</p>
+      </section>
+      <section class="quote">
+        <blockquote>“The best part isn’t the place. It’s getting to know you a little more.”</blockquote>
+        <div class="eyebrow">So… what do you say? ❤️</div>
+      </section>
+    </main>
+    <footer><span>Made with intention, just for Xae Theo.</span><span>One invitation. One chance. Good vibes only. ♥</span></footer>
+  </div>
+  <script>
+    function reply(choice) {
+      const messages = {
+        yes: "You just made me smile for real 😭❤️ Screenshot this and send it back to me — then we’ll choose our day!",
+        maybe: "I respect that 😂❤️ No pressure. Think about it, and let me know when you’re ready.",
+        plan: "That’s what I’m talking about 😌❤️ Tell me what day works for you and we’ll plan something nice together."
+      };
+      document.getElementById("reply").textContent = messages[choice];
+      document.getElementById("reply").scrollIntoView({behavior:"smooth",block:"nearest"});
+    }
+  </script>
+</body>
+</html>
